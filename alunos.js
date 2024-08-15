@@ -5,11 +5,15 @@ conectaBancoDeDados() // estou chamando a função que conecta o banco de dados
 
 const Aluno = require('./alunosModel')
 const app = express();
-const porta = 3333;
+const porta = process.env.PORT||3333;
 
 // Middleware para parsear o corpo da requisição como JSON
 app.use(express.json());
-app.use(cors())
+app.use(cors());
+
+app.get('/', (req, res) => {
+    res.send('Servidor está funcionando!');
+  });
 
 // GET
 async function mostraAlunos(request, response) {
