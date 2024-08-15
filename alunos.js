@@ -3,7 +3,7 @@ const cors = require('cors') // permite integração com o frontend
 const conectaBancoDeDados = require('./bancoDeDados') // conectando o banco de dados
 conectaBancoDeDados() // estou chamando a função que conecta o banco de dados
 
-const Aluno = require('./alunoModel')
+const Aluno = require('./alunosModel')
 const app = express();
 const porta = 3333;
 
