@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const conectaBancoDeDados = require('./bancoDeDados') // conectando o banco de dados
 conectaBancoDeDados() // estou chamando a função que conecta o banco de dados
 
